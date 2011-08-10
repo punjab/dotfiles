@@ -3,4 +3,9 @@
 "  "
 "  ---------------------------------------------------------------------------
 color desert
+
+" Get rid of those ugly scrollbars in mvim
 set guioptions=aAce
+
+" Monaco looks good at 16pts
+set guifont=Monaco:h16
