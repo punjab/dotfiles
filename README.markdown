@@ -1,12 +1,17 @@
-# Generic configuration files or "dotfiles" go here
-
 ## Background
 After moving from Snow Leopard to Lion and a fresh install, I got rid of
 all the old settings that I had borrowed and patched and started from
 scratch (while referring to the old.)
 
-This is my home git tree. 
-`cd && git init `
+Vim uses Janus, zsh uses oh-myzsh. They are maintained seperately, only
+overrides here.
+
+This is my dotfile git tree.
+
+```
+cd && mkdir -p .dotfiles
+cd .dotfiles && git init
+```
 
 To start with I have ignored everything in the
 repository. This way only the stuff I manually add gets added.
@@ -20,4 +25,4 @@ git status
 git commit -m "Checked in README"
 ```
 
-Now your turn!
+Now you do it!
