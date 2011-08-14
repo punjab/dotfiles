@@ -1,0 +1,6 @@
+# Configuration file for ruby gems
+
+# Disable installing rdoc as well as r
+# Disable installing rdoc as well as ri
+install: --no-rdoc --no-ri
+update: --no-rdoc --no-ri
