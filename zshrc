@@ -21,7 +21,7 @@ ZSH_THEME="punjab"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git rails ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,3 +29,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Load rvm
 [[ -s "/Users/askang/.rvm/scripts/rvm" ]] && source "/Users/askang/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+# Add home bin directory
+PATH=${PATH}:/Users/askang/bin
+
+# Fix error in rake- zsh: no matches found: task[param]
+alias rake='noglob rake'
