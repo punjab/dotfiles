@@ -21,7 +21,7 @@ ZSH_THEME="punjab"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby)
+plugins=(git rails rails3 ruby)
 
 source $ZSH/oh-my-zsh.sh
 
