@@ -39,3 +39,5 @@ alias rake='noglob rake'
 # Add Drupal drush executable path ~/bin/drush/drush
 PATH=${PATH}:/Users/askang/bin/drush
 
+# Python Startup file to enable readline
+export PYTHONSTARTUP=~/.pythonrc
