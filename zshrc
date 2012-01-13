@@ -39,5 +39,9 @@ alias rake='noglob rake'
 # Add Drupal drush executable path ~/bin/drush/drush
 PATH=${PATH}:/Users/askang/bin/drush
 
-# Python Startup file to enable readline
+# virtualenv. Using system default python 2.7.1
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Python Shell Startup file to enable readline
 export PYTHONSTARTUP=~/.pythonrc
