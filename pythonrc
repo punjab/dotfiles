@@ -4,3 +4,7 @@ if 'libedit' in readline.__doc__:
   readline.parse_and_bind("bind ^I rl_complete")
 else:
   readline.parse_and_bind("tab: complete")
+
+# virtualenv. Using system default python 2.7.1
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
