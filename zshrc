@@ -40,8 +40,7 @@ alias rake='noglob rake'
 PATH=${PATH}:/Users/askang/bin/drush
 
 # Add LATEX
-PATH="/usr/texbin:${PATH}"
-export PATH
+export PATH="/usr/texbin:${PATH}"
 
 # virtualenv. Using system default python 2.7.1
 export WORKON_HOME=$HOME/.virtualenvs
@@ -49,3 +48,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Python Shell Startup file to enable readline
 export PYTHONSTARTUP=~/.pythonrc
+
+# Use Git from brew instead of Xcode
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
