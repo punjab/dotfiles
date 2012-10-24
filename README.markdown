@@ -3,7 +3,7 @@ After moving from Snow Leopard to Lion and a fresh install, I got rid of
 all the old settings that I had borrowed and patched and started from
 scratch (while referring to the old.)
 
-Vim uses Janus, zsh uses oh-myzsh. They are maintained seperately, only
+Vim uses ~~Janus~~, zsh uses oh-myzsh. They are maintained seperately, only
 overrides here.
 
 This is my dotfile git tree.
