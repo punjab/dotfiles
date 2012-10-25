@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="punjab"
+ZSH_THEME="default"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -37,7 +37,7 @@ PATH=${PATH}:/Users/askang/bin
 alias rake='noglob rake'
 
 # Add Drupal drush executable path ~/bin/drush/drush
-PATH=${PATH}:/Users/askang/bin/drush
+# PATH=${PATH}:/Users/askang/bin/drush
 
 # Add LATEX
 export PATH="/usr/texbin:${PATH}"
