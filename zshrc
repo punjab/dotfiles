@@ -51,3 +51,9 @@ export PYTHONSTARTUP=~/.pythonrc
 
 # Use Git from brew instead of Xcode
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# Load tmuxinator for tmux
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# vim is the default editor
+export EDITOR=vim
