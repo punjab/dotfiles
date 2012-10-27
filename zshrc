@@ -57,3 +57,11 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # vim is the default editor
 export EDITOR=vim
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin 
+
+# Alias
+alias t="tmux attach"
+alias cls="clear"
+alias python-httpserver='python -c "import SimpleHTTPServer, SocketServer, BaseHTTPServer; SimpleHTTPServer.test(SimpleHTT    PServer.SimpleHTTPRequestHandler, type('"'"'Server'"'"', (BaseHTTPServer.HTTPServer, SocketServer.ThreadingMixIn, object),     {}))" 9090'
