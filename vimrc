@@ -19,7 +19,7 @@ set ignorecase			            " searches are cases insensitive
 set smartcase			              " err..unles they contain atleast one cpaital letter.
 
 "" Colors
-colorscheme solarized
+colorscheme desert
 if has("gui_running")
   set background=light
   set transparency=15
