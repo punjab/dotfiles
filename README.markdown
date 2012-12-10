@@ -1,28 +1,14 @@
 ## Background
-After moving from Snow Leopard to Lion and a fresh install, I got rid of
-all the old settings that I had borrowed and patched and started from
-scratch (while referring to the old.)
+Come home to [Vim](http://www.vim.org) as default editor and [Zsh](http://www.zsh.org) as default shell.
 
-Vim uses ~~Janus~~, zsh uses oh-myzsh. They are maintained seperately, only
-overrides here.
+Zsh uses [oh-myzsh](https://github.com/robbyrussell/oh-my-zsh). They are maintained seperately, thus install it from [here](https://github.com/robbyrussell/oh-my-zsh) before moving ahead. Back? Now proceed.
 
-This is my dotfile git tree.
+Start by cloning the repository.
 
 ```
-cd && mkdir -p .dotfiles
-cd .dotfiles && git init
+git clone git@github.com:punjab/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+rake install
 ```
 
-To start with I have ignored everything in the
-repository. This way only the stuff I manually add gets added.
-`echo * >> ~/.git/info/exclude`
-
-This README.markdown is the first file added. Subsequent files will be added one by one and documented.
-
-```
-git add README.markdown
-git status
-git commit -m "Checked in README"
-```
-
-Now you do it!
+Now restart the sesion.
