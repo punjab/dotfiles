@@ -29,3 +29,8 @@ else
   set background=dark
 endif
 
+" Distraction free writing mode
+let g:fullscreen_colorscheme = "iawriter"
+let g:fullscreen_font = "Cousine:h16"
+let g:normal_colorscheme = "codeschool"
+let g:normal_font="Inconsolata:h16"
