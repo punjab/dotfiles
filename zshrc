@@ -65,6 +65,7 @@ PATH=$PATH:$HOME/.rvm/bin
 alias t="tmux attach"
 alias cls="clear"
 alias python-httpserver='python -c "import SimpleHTTPServer, SocketServer, BaseHTTPServer; SimpleHTTPServer.test(SimpleHTT    PServer.SimpleHTTPRequestHandler, type('"'"'Server'"'"', (BaseHTTPServer.HTTPServer, SocketServer.ThreadingMixIn, object),     {}))" 9090'
+alias scheme="rlwrap mit-scheme -large"
 
 # Heroku
 export PATH="/usr/local/heroku/bin:$PATH"
