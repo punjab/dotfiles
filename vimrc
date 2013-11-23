@@ -1,10 +1,16 @@
-call pathogen#infect()          " runtime manipulator plugin
 set nocompatible                " choose no compatibility with legacy vi
-call pathogen#infect()          " runtime manipulator plugin
+filetype off                    " required
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required!
+Bundle 'gmarik/vundle'
+
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
+filetype plugin indent on       " load file type plugins + indentation, required
 
 "" Whitespace
 set nowrap                      " don't wrap lines
