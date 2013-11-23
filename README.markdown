@@ -18,3 +18,7 @@ rake install
 ```
 
 Now restart the sesion. That is it.
+
+# Credits
+- ZSH conversion - [Why Zsh is Cooler than Your Shell](http://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692)
+- [An Introduction to the Z Shell](http://zsh.sourceforge.net/Intro/intro_1.html)
