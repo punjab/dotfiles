@@ -14,32 +14,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-#************************************************************************ PATH
-# Add home bin directory
-PATH=${PATH}:/Users/askang/bin
-
-# Add LATEX
-export PATH="/usr/texbin:${PATH}"
-
-# Use Git from brew instead of Xcode
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# vim is the default editor
-export EDITOR=vim
-
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
-
-# Heroku
-export PATH="/usr/local/heroku/bin:$PATH" 
-
-#************************************************************************ ALIAS
-alias t="tmux attach"
-alias cls="clear"
-# Fix error in rake- zsh: no matches found: task[param]
-alias rake='noglob rake'
-
 #************************************************************************ LOAD
+
+for file in ~/.{path,exports,aliases,functions,extra}; do
+        [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
 
 # Load tmuxinator for tmux
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

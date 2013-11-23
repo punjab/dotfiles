@@ -1,0 +1,14 @@
+# Add home bin directory
+PATH=${PATH}:/Users/askang/bin
+
+# Add LATEX
+export PATH="/usr/texbin:${PATH}"
+
+# Use Git from brew instead of Xcode
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin:$PATH
+
+# Heroku
+export PATH="/usr/local/heroku/bin:$PATH" 
