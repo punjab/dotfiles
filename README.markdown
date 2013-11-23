@@ -1,9 +1,15 @@
-## Background
-Come home to [Vim](http://www.vim.org) as default editor and [Zsh](http://www.zsh.org) as default shell.
+## .dotfiles
 
-Zsh uses [oh-myzsh](https://github.com/robbyrussell/oh-my-zsh). They are maintained seperately, thus install it from [here](https://github.com/robbyrussell/oh-my-zsh) before moving ahead. Back? Now proceed.
+My spartan dotfiles setup
 
-Start by cloning the repository.
+- [Zsh](http://www.zsh.org) as default shell
+- [Vim](http://www.vim.org) as default editor
+
+## How to use
+
+Zsh uses [oh-myzsh](https://github.com/robbyrussell/oh-my-zsh), thus clone it from [here](https://github.com/robbyrussell/oh-my-zsh) into your root directory before moving ahead. Back? Now proceed.
+
+Now follow these commands.
 
 ```
 git clone git@github.com:punjab/dotfiles.git ~/.dotfiles
@@ -11,4 +17,4 @@ cd ~/.dotfiles
 rake install
 ```
 
-Now restart the sesion.
+Now restart the sesion. That is it.
