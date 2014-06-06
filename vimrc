@@ -10,7 +10,17 @@ Bundle 'gmarik/vundle'
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation, required
+set number                      " Set line number by default
+if has("autocmd")               " Setting for irb
+  " load file type plugins + indentation, required
+  filetype plugin indent on       
+
+  " Restore cursor position
+  autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
+endif
 
 "" Whitespace
 set nowrap                      " don't wrap lines
