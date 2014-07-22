@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="punjab"
 
 # Plugins (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(git rails ruby textmate)
@@ -31,3 +31,10 @@ export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias git=hub
+
+# Extended mv command
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
+# ls is always long
+alias ls="ls -ltch"

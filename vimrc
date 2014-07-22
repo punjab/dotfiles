@@ -1,11 +1,19 @@
 set nocompatible                " choose no compatibility with legacy vi
 filetype off                    " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
+
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe'
+let g:clang_user_options='|| exit 0'
+
+" Emmet for web development
+Bundle "mattn/emmet-vim"
+call vundle#end()               "required by Vundle
 
 syntax enable
 set encoding=utf-8
