@@ -1,34 +1,46 @@
 set nocompatible                " choose no compatibility with legacy vi
-filetype off                    " required
 
+"" Vundle is the Manager
+filetype off                    " required by Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required!
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'   " let Vundle manage Vundle, required!
+Plugin 'kien/ctrlp.vim'         " Fuzzy buffer list files by Ctrl-P
+Plugin 'mattn/emmet-vim'        " Emmet for web development
+Plugin 'scrooloose/nerdtree'    " File sidebar
+Plugin 'tpope/vim-fugitive'     " Awesome git integration
+Plugin 'bling/vim-airline'      " Airline status command
+Plugin 'vim-ruby/vim-ruby'      " Compile ruby in vim
+Plugin 'tpope/vim-rails'
+" Snipmate and dependencies
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin  'honza/vim-snippets'
+call vundle#end()               " required by Vundle
 
-" Autocomplete
-Plugin 'Valloric/YouCompleteMe'
-let g:clang_user_options='|| exit 0'
+syntax on             " Enable syntax highlighting
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 
-" Emmet for web development
-Bundle "mattn/emmet-vim"
-call vundle#end()               "required by Vundle
+" Brief help
+" " :PluginList       - lists configured plugins
+" " :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" " :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " Put your non-Plugin stuff after this line
 
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 set number                      " Set line number by default
-if has("autocmd")               " Setting for irb
-  " load file type plugins + indentation, required
-  filetype plugin indent on       
-
-  " Restore cursor position
-  autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \   exe "normal! g`\"" |
-        \ endif
-endif
+set laststatus=2                " For airline to show up 
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -43,18 +55,17 @@ set ignorecase			            " searches are cases insensitive
 set smartcase			              " err..unles they contain atleast one cpaital letter.
 
 "" Colors
-colorscheme desert
+colorscheme smyck
 if has("gui_running")
   set background=light
   set transparency=15
   set guioptions=aAce           " Get rid of those ugly scrollbars in mvim
-  set guifont=Inconsolata:h16   " Inconsolata looks good at 16pts
+  set guifont=Hack:h16   " Inconsolata looks good at 16pts
 else
   set background=dark
 endif
 
-" Distraction free writing mode
-let g:fullscreen_colorscheme = "iawriter"
-let g:fullscreen_font = "Cousine:h16"
-let g:normal_colorscheme = "codeschool"
-let g:normal_font="Inconsolata:h16"
+"" Shortcuts
+map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>") " Using tab instead of Ctrl-Y for emmet exapansion
+map <C-n> :NERDTreeToggle<CR> " Toggle NerdTree
