@@ -1,14 +1,37 @@
-# Add home bin directory
+# # Add home bin directory
 PATH=${PATH}:/Users/askang/bin
-
-# Add LATEX
-export PATH="/usr/texbin:${PATH}"
 
 # Use Git from brew instead of Xcode
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin:$PATH
+# MacTex and MacGPG paths
+eval `/usr/libexec/path_helper -s`
 
-# Heroku
-export PATH="/usr/local/heroku/bin:$PATH" 
+# Load tmuxinator for tmux
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# To use Homebrew's directories rather than ~/.rbenv add to your profile:
+export RBENV_ROOT=/usr/local/var/rbenv
+# To enable shims and autocompletion add to your profile:
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# gm is graphicsmagick
+unalias gm
+
+# Extended mv command
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
+# Path for PSQL app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# Add custom npm path
+export PATH="$HOME/.node/bin:$PATH"
+# And nvm
+export NVM_DIR="/Users/askang/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

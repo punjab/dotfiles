@@ -12,7 +12,6 @@ installcask google-chrome-canary
 installcask imagealpha
 installcask imageoptim
 installcask iterm2
-installcask macvim
 installcask the-unarchiver
 installcask transmission
 installcask ukelele

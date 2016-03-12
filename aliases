@@ -17,9 +17,24 @@ alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
-alias g="git"
 alias h="history"
 alias j="jobs"
+
+# Git Shortcuts
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+alias mp3='mpsyt'
+alias be='bundle exec'
+alias ber='bundle exec rspec'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -30,6 +45,8 @@ fi
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
+# ls is always long
+alias ls="ls -ltch"
 
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
@@ -53,13 +70,13 @@ alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
+#alias whois="whois -h whois-servers.net"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Show/hide hidden files in Finder
@@ -69,3 +86,28 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Rails
+alias rdm="bin/rake db:migrate"
+alias rs="bin/rails s"
+
+# Apps
+alias vim="/usr/local/bin/nvim"
+
+# show/hide hidden files
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# MYSQL using MAMP
+# export PATH=/usr/local/bin:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.5.14/bin:$PATH
+#export PATH=./bin:$PATH
+
+# alias
+alias mp3c='for f in *.m4a; do ffmpeg -i "$f" -acodec libmp3lame -ab 320k "${f%.m4a}.mp3"; done'
+
+# Pinboard using pin-cusion
+alias pin='pin-cushion '
+
+# Lighthouse Labs shit
+alias compass_ssh='ssh root@compass.lighthouselabs.ca'
+alias lighthouse_ssh='ssh root@107.170.157.51'
