@@ -1,5 +1,11 @@
 set nocompatible                " choose no compatibility with legacy vi
 
+let g:python_host_prog = '/usr/local/var/pyenv/shims/python'
+let g:python3_host_prog = '/usr/local/var/pyenv/shims/python'
+let g:ycm_path_to_python_interpreter = '/usr/local/var/pyenv/shims/python'
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
 "" Vundle is the Manager
 filetype off                    " required by Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -19,7 +25,7 @@ Plugin 'rking/ag.vim'           " Better than grep
 Plugin 'SirVer/ultisnips'
 Plugin 'ervandew/supertab'      " Perform all your vim insert mode completions with Tab
 Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe' " Autocomplete
+""Plugin 'Valloric/YouCompleteMe' " Autocomplete
 " React
 Plugin 'mxw/vim-jsx'
 Plugin 'punjab/vim-react-snippets'
@@ -98,3 +104,4 @@ inoremap ' ''<Esc>i
 
 " Setup JSX highlighing for .js files
 let g:jsx_ext_required = 0
+

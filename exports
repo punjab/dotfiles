@@ -23,3 +23,5 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+export GITHUB_TOKEN=d4ec1a447afc8a67796b52059f233be966db2613

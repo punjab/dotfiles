@@ -59,3 +59,13 @@ function getcertnames() {
                 return 1
         fi
 }
+
+# Convert a ESRI shapefile to PostGIS table
+function shp2pgis(){
+  # $1 from_srid:to_srid e.g 2227:3857
+  # Check your shape file's srid here http://prj2epsg.org/search
+  # $2 should be path to .shp file
+  # $3 should be schema e.g. usa.landuse
+  # $4 should be name of the psql database to import to
+  shp2pgsql -I -s $1 $2 $3 | psql -p 5432 -d $4
+}

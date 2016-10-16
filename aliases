@@ -1,5 +1,6 @@
 alias t="tmux attach"
 alias cls="clear"
+alias python3='/usr/local/var/pyenv/shims/python'
 
 # Fix error in rake- zsh: no matches found: task[param]
 alias rake='noglob rake'
@@ -18,7 +19,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias h="history"
-alias j="jobs"
 
 # Git Shortcuts
 alias gs='git status '
@@ -35,6 +35,7 @@ alias get='git '
 alias mp3='mpsyt'
 alias be='bundle exec'
 alias ber='bundle exec rspec'
+alias b='bundle'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -88,8 +89,11 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # Rails
-alias rdm="bin/rake db:migrate"
+alias rdm="bin/rails db:migrate"
+alias rds="bin/rails db:seed"
 alias rs="bin/rails s"
+alias rc="bin/rails c"
+alias rim="be rake railties:install:migrations"
 
 # Apps
 alias vim="/usr/local/bin/nvim"
@@ -108,6 +112,14 @@ alias mp3c='for f in *.m4a; do ffmpeg -i "$f" -acodec libmp3lame -ab 320k "${f%.
 # Pinboard using pin-cusion
 alias pin='pin-cushion '
 
-# Lighthouse Labs shit
-alias compass_ssh='ssh root@compass.lighthouselabs.ca'
-alias lighthouse_ssh='ssh root@107.170.157.51'
+# Chrome
+alias chrome="open /Applications/Google\ Chrome.app/ --args --disable-web-security"
+
+# Jekyll
+alias js="jekyll serve"
+
+alias shp2pgsql='/Applications/Postgres.app/Contents/Versions/9.5/bin/shp2pgsql'
+
+# Project paths
+alias cl='/Users/askang/Projects/2016/CommunityLogiq'
+alias aa='/Users/askang/0-CURRENT/AAProject/code/AlooAtta'
