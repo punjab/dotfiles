@@ -14,7 +14,7 @@ plugins=(git ruby colorize z github gitignore)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-for file in ~/.{path,exports,aliases,functions,extra}; do
+for file in ~/.{env,path,exports,aliases,functions,extra}; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
