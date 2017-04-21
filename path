@@ -1,5 +1,5 @@
 # # Add home bin directory
-PATH=${PATH}:/Users/askang/bin
+PATH=${PATH}:~/bin
 
 # Use Git from brew instead of Xcode
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -38,6 +38,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Add custom npm path
 export PATH="$HOME/.node/bin:$PATH"
 # And nvm
-export NVM_DIR="/Users/askang/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

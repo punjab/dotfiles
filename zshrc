@@ -24,18 +24,18 @@ bindkey -v
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/askang/bin/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/askang/bin/google-cloud-sdk/path.zsh.inc'
+if [ -f ~/bin/google-cloud-sdk/path.zsh.inc ]; then
+  source '~/bin/google-cloud-sdk/path.zsh.inc'
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f /Users/askang/bin/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/askang/bin/google-cloud-sdk/completion.zsh.inc'
+if [ -f ~/bin/google-cloud-sdk/completion.zsh.inc ]; then
+  source '~/bin/google-cloud-sdk/completion.zsh.inc'
 fi
 
-export PATH=$PATH:/Users/askang/bin
+export PATH=$PATH:~/bin
 
-source '/Users/askang/lib/azure-cli/az.completion'
+source '~/lib/azure-cli/az.completion'
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
