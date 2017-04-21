@@ -32,11 +32,3 @@ fi
 if [ -f /Users/askang/bin/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/askang/bin/google-cloud-sdk/completion.zsh.inc'
 fi
-
-export PATH=$PATH:/Users/askang/bin
-
-source '/Users/askang/lib/azure-cli/az.completion'
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"

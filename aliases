@@ -95,9 +95,6 @@ alias rs="bin/rails s"
 alias rc="bin/rails c"
 alias rim="be rake railties:install:migrations"
 
-# Apps
-alias vim="/usr/local/bin/nvim"
-
 # show/hide hidden files
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
@@ -118,8 +115,8 @@ alias chrome="open /Applications/Google\ Chrome.app/ --args --disable-web-securi
 # Jekyll
 alias js="jekyll serve"
 
-alias shp2pgsql='/Applications/Postgres.app/Contents/Versions/9.5/bin/shp2pgsql'
+alias shp2pgsql='/Applications/Postgres.app/Contents/Versions/latest/bin/shp2pgsql'
+alias psql='/Applications/Postgres.app/Contents/Versions/latest/bin/psql'
 
 # Project paths
-alias cl='/Users/askang/Projects/2016/CommunityLogiq'
-alias aa='/Users/askang/0-CURRENT/AAProject/code/AlooAtta'
+alias project='source /Users/askang/.dotfiles/scripts/project.sh'
