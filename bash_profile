@@ -16,5 +16,3 @@
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
-
-[[ -s "/Users/askang/.rvm/scripts/rvm" ]] && source "/Users/askang/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

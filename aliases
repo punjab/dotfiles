@@ -119,4 +119,4 @@ alias shp2pgsql='/Applications/Postgres.app/Contents/Versions/latest/bin/shp2pgs
 alias psql='/Applications/Postgres.app/Contents/Versions/latest/bin/psql'
 
 # Project paths
-alias project='source /Users/askang/.dotfiles/scripts/project.sh'
+alias project='source ~/.dotfiles/scripts/project.sh'
