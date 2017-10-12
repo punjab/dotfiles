@@ -3,18 +3,18 @@ export TERM="xterm-256color"
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
+# Look in $HOME/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it"ll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
 
-# Plugins (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Plugins (plugins can be found in $HOME/.oh-my-zsh/plugins/*)
 plugins=(git ruby colorize z github gitignore)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-for file in ~/.{env,path,exports,aliases,functions,extra}; do
+for file in $HOME/.{env,path,exports,aliases,functions,extra}; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -22,21 +22,26 @@ unset file
 # Vi mode
 bindkey -v
 
+# Python Configurations
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init - > /dev/null 2>&1)"; fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f ~/bin/google-cloud-sdk/path.zsh.inc ]; then
-  source '~/bin/google-cloud-sdk/path.zsh.inc'
+if [ -f $HOME/bin/google-cloud-sdk/path.zsh.inc ]; then
+  source "$HOME/bin/google-cloud-sdk/path.zsh.inc"
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f ~/bin/google-cloud-sdk/completion.zsh.inc ]; then
-  source '~/bin/google-cloud-sdk/completion.zsh.inc'
+if [ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ]; then
+  source "$HOME/bin/google-cloud-sdk/completion.zsh.inc"
 fi
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:$HOME/bin
 
-source '~/lib/azure-cli/az.completion'
-fpath=(~/.zsh/completion $fpath)
+fpath=($HOME/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi

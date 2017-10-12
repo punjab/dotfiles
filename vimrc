@@ -1,51 +1,32 @@
 set nocompatible                " choose no compatibility with legacy vi
 
-let g:python_host_prog = '/usr/local/var/pyenv/shims/python'
-let g:python3_host_prog = '/usr/local/var/pyenv/shims/python'
-let g:ycm_path_to_python_interpreter = '/usr/local/var/pyenv/shims/python'
+let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim/bin/python'
+let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim/bin/python'
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
-"" Vundle is the Manager
-filetype off                    " required by Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"" Vim-plug is the Manager
+call plug#begin('~/.config/nvim/plugged')
+" Pandoc / Markdown
+Plug 'vim-pandoc/vim-pandoc', { 'for': [ 'pandoc', 'markdown' ] }
+Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': [ 'pandoc', 'markdown' ] }
 
-Plugin 'VundleVim/Vundle.vim'   " let Vundle manage Vundle, required!
-Plugin 'kien/ctrlp.vim'         " Fuzzy buffer list files by Ctrl-P
-Plugin 'mattn/emmet-vim'        " Emmet for web development
-Plugin 'scrooloose/nerdtree'    " File sidebar
-Plugin 'tpope/vim-fugitive'     " Awesome git integration
-Plugin 'bling/vim-airline'      " Airline status command
-Plugin 'vim-ruby/vim-ruby'      " Compile ruby in vim
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'     " HTML editing
-Plugin 'rking/ag.vim'           " Better than grep
-" Snipmate and dependencies
-Plugin 'SirVer/ultisnips'
-Plugin 'ervandew/supertab'      " Perform all your vim insert mode completions with Tab
-Plugin 'honza/vim-snippets'
-""Plugin 'Valloric/YouCompleteMe' " Autocomplete
-" React
-Plugin 'mxw/vim-jsx'
-Plugin 'punjab/vim-react-snippets'
-call vundle#end()               " required by Vundle
+" General
+Plug 'benekastah/neomake'
+Plug 'Shougo/deoplete.nvim'
+Plug 'Raimondi/delimitMate'
+Plug 'ervandew/supertab'
+
+" Vim carried over
+Plug 'mattn/emmet-vim'        " Emmet for web development
+Plug 'bling/vim-airline'      " Airline status command
+Plug 'rking/ag.vim'           " Better than grep
+call plug#end()
 
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-
-" Brief help
-" " :PluginList       - lists configured plugins
-" " :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" " :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " Put your non-Plugin stuff after this line
 
 syntax enable
 set encoding=utf-8
@@ -79,21 +60,9 @@ endif
 
 "" Shortcuts
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>") " Using tab instead of Ctrl-Y for emmet exapansion
-map <C-n> :NERDTreeToggle<CR> " Toggle NerdTree
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Remap Emmet leader key to '
-let g:user_emmet_leader_key=','
+" let g:user_emmet_leader_key=','
 
 " Automatic closing brackets
 inoremap ( ()<Esc>i

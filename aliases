@@ -1,4 +1,4 @@
-alias t="tmux attach"
+#alias t="tmux attach"
 alias cls="clear"
 alias python3='/usr/local/var/pyenv/shims/python'
 
