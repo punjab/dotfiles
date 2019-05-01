@@ -6,7 +6,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in $HOME/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it"ll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+#ZSH_THEME="bullet-train"
+ZSH_THEME="refined"
 
 # Plugins (plugins can be found in $HOME/.oh-my-zsh/plugins/*)
 plugins=(git ruby colorize z github gitignore)
@@ -36,6 +37,7 @@ if [ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ]; then
 fi
 
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
 
 fpath=($HOME/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
@@ -45,3 +47,6 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+
+source ~/.iterm2_shell_integration.zsh
+

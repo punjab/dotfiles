@@ -1,9 +1,7 @@
 set nocompatible                " choose no compatibility with legacy vi
 
 let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim/bin/python'
-let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim/bin/python'
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog = '/usr/local/var/pyenv/shims/python'
 
 "" Vim-plug is the Manager
 call plug#begin('~/.config/nvim/plugged')
@@ -13,14 +11,22 @@ Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': [ 'pandoc', 'markdown' ] }
 
 " General
 Plug 'benekastah/neomake'
-Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'ervandew/supertab'
+Plug 'tpope/vim-commentary'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Vim carried over
 Plug 'mattn/emmet-vim'        " Emmet for web development
 Plug 'bling/vim-airline'      " Airline status command
 Plug 'rking/ag.vim'           " Better than grep
+Plug 'dracula/vim'
 call plug#end()
 
 syntax on             " Enable syntax highlighting
@@ -48,14 +54,14 @@ set ignorecase			            " searches are cases insensitive
 set smartcase			              " err..unles they contain atleast one cpaital letter.
 
 "" Colors
-colorscheme smyck
+color dracula
 if has("gui_running")
   set background=dark
   set transparency=15
   set guioptions=aAce           " Get rid of those ugly scrollbars in mvim
   set guifont=Hack:h16   " Inconsolata looks good at 16pts
 else
-  set background=dark
+""  set background=dark
 endif
 
 "" Shortcuts

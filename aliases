@@ -22,11 +22,12 @@ alias h="history"
 
 # Git Shortcuts
 alias gs='git status '
+alias gcl='git clone '
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
-alias go='git checkout '
+#alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 
@@ -36,6 +37,8 @@ alias mp3='mpsyt'
 alias be='bundle exec'
 alias ber='bundle exec rspec'
 alias b='bundle'
+
+alias tree='tree -L 2'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -115,8 +118,8 @@ alias chrome="open /Applications/Google\ Chrome.app/ --args --disable-web-securi
 # Jekyll
 alias js="jekyll serve"
 
-alias shp2pgsql='/Applications/Postgres.app/Contents/Versions/latest/bin/shp2pgsql'
-alias psql='/Applications/Postgres.app/Contents/Versions/latest/bin/psql'
+#alias shp2pgsql='/Applications/Postgres.app/Contents/Versions/latest/bin/shp2pgsql'
+#alias psql='/Applications/Postgres.app/Contents/Versions/latest/bin/psql'
 
 # Project paths
 alias project='source ~/.dotfiles/scripts/project.sh'

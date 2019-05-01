@@ -2,7 +2,7 @@
 PATH=${PATH}:~/bin
 
 # Use Git from brew instead of Xcode
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # MacTex and MacGPG paths
 eval `/usr/libexec/path_helper -s`
@@ -17,7 +17,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Now Pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
+PATH="$PYENV_ROOT/bin:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # gm is graphicsmagick
@@ -28,16 +28,20 @@ autoload -U zmv
 alias mmv='noglob zmv -W'
 
 # Path for PSQL app
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/
 
 # Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+PATH="/usr/local/heroku/bin:$PATH"
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # Add custom npm path
-export PATH="$HOME/.node/bin:$PATH"
+PATH="$HOME/.node/bin:$PATH"
 # And nvm
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Flutter
+PATH="$HOME/Applications/flutter/bin:$PATH"
+
+export PATH
