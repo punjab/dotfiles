@@ -7,9 +7,6 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # MacTex and MacGPG paths
 eval `/usr/libexec/path_helper -s`
 
-# Load tmuxinator for tmux
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
 # To use Homebrew's directories rather than ~/.rbenv add to your profile:
 export RBENV_ROOT=/usr/local/var/rbenv
 # To enable shims and autocompletion add to your profile:
@@ -37,11 +34,5 @@ PATH="/usr/local/heroku/bin:$PATH"
 
 # Add custom npm path
 PATH="$HOME/.node/bin:$PATH"
-# And nvm
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Flutter
-PATH="$HOME/Applications/flutter/bin:$PATH"
 
 export PATH

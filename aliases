@@ -109,9 +109,6 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # alias
 alias mp3c='for f in *.m4a; do ffmpeg -i "$f" -acodec libmp3lame -ab 320k "${f%.m4a}.mp3"; done'
 
-# Pinboard using pin-cusion
-alias pin='pin-cushion '
-
 # Chrome
 alias chrome="open /Applications/Google\ Chrome.app/ --args --disable-web-security"
 
