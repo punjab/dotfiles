@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it"ll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="bullet-train"
-ZSH_THEME="refined"
+ZSH_THEME="spaceship"
 
 # Plugins (plugins can be found in $HOME/.oh-my-zsh/plugins/*)
 plugins=(git ruby colorize z github gitignore)
@@ -47,6 +47,4 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
-
-source ~/.iterm2_shell_integration.zsh
 
