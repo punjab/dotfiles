@@ -4,22 +4,6 @@ PATH=${PATH}:~/bin
 # Use Git from brew instead of Xcode
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# MacTex and MacGPG paths
-eval `/usr/libexec/path_helper -s`
-
-# To use Homebrew's directories rather than ~/.rbenv add to your profile:
-export RBENV_ROOT=/usr/local/var/rbenv
-# To enable shims and autocompletion add to your profile:
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# Now Pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-PATH="$PYENV_ROOT/bin:$PATH"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-# gm is graphicsmagick
-unalias gm
-
 # Extended mv command
 autoload -U zmv
 alias mmv='noglob zmv -W'
@@ -31,8 +15,5 @@ PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/
 PATH="/usr/local/heroku/bin:$PATH"
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
-# Add custom npm path
-PATH="$HOME/.node/bin:$PATH"
 
 export PATH
