@@ -23,19 +23,6 @@ unset file
 # Vi mode
 bindkey -v
 
-# Python Configurations
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init - > /dev/null 2>&1)"; fi
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME/bin/google-cloud-sdk/path.zsh.inc ]; then
-  source "$HOME/bin/google-cloud-sdk/path.zsh.inc"
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ]; then
-  source "$HOME/bin/google-cloud-sdk/completion.zsh.inc"
-fi
-
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.local/bin
 
