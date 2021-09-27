@@ -27,6 +27,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PGHOST=localhost
 
 # Adding virtualenv support for ASDF
-source ~/.asdf/asdf.sh
+source "$(brew --prefix asdf)"/asdf.sh
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects

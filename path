@@ -19,7 +19,7 @@ PATH="/usr/local/heroku/bin:$PATH"
 . "$(brew --prefix asdf)"/asdf.sh
 
 # Python from asdf
-export PATH=$PATH:$HOME/.asdf/installs/python/3.8.1/bin
+# export PATH=$PATH:$HOME/.asdf/installs/python/3.8.1/bin
 
 # Flutter
 export PATH="$PATH:$HOME/development/flutter/bin"
