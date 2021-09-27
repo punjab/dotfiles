@@ -69,3 +69,13 @@ function shp2pgis(){
   # $4 should be name of the psql database to import to
   shp2pgsql -I -s $1 $2 $3 | psql -p 5432 -d $4
 }
+
+# Functions for creating python named asdf environments with virtualenv
+mkenv(){
+    virtualenv -p $(asdf where python "$1")/bin/python "$WORKON_HOME"/"$2"
+}
+
+workon(){
+    source "$WORKON_HOME"/"$1"/bin/activate
+    [ -d "$PROJECT_HOME"/"$1" ] && cd "$PROJECT_HOME"/"$1"
+}

@@ -40,17 +40,20 @@ alias b='bundle'
 
 alias tree='tree -L 2'
 
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-        colorflag="--color"
-else # OS X `ls`
-        colorflag="-G"
-fi
+# Docker alias
+alias dk="docker"
+alias dkb="docker build"
+alias dks="docker stop"
+alias dksa="docker stop $(docker ps -q)"
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+drm() { docker rm $(docker ps -q -a); } # Removes containers
+dri() { docker rmi $(docker images -q); } # Remove images
+
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+#alias l="ls -lF ${colorflag}"
 # ls is always long
-alias ls="ls -ltch"
+#alias ls="ls -ltch"
 
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
@@ -120,3 +123,6 @@ alias js="jekyll serve"
 
 # Project paths
 alias project='source ~/.dotfiles/scripts/project.sh'
+
+# Mongodb in local folder
+alias mongod="mongod --dbpath /Users/askang/usr/local/var/mongodb"
