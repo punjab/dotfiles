@@ -1,4 +1,4 @@
-source ~/.profile
+# source ~/.profile
 # August 9, 2011
 # http://github.com/punjab
 #

@@ -44,10 +44,10 @@ alias tree='tree -L 2'
 alias dk="docker"
 alias dkb="docker build"
 alias dks="docker stop"
-alias dksa="docker stop $(docker ps -q)"
-alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-drm() { docker rm $(docker ps -q -a); } # Removes containers
-dri() { docker rmi $(docker images -q); } # Remove images
+#alias dksa="docker stop $(docker ps -q)"
+#alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+#drm() { docker rm $(docker ps -q -a); } # Removes containers
+#dri() { docker rmi $(docker images -q); } # Remove images
 
 
 # List all files colorized in long format
@@ -99,15 +99,10 @@ alias rdm="bin/rails db:migrate"
 alias rds="bin/rails db:seed"
 alias rs="bin/rails s"
 alias rc="bin/rails c"
-alias rim="be rake railties:install:migrations"
 
 # show/hide hidden files
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# MYSQL using MAMP
-# export PATH=/usr/local/bin:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.5.14/bin:$PATH
-#export PATH=./bin:$PATH
 
 # alias
 alias mp3c='for f in *.m4a; do ffmpeg -i "$f" -acodec libmp3lame -ab 320k "${f%.m4a}.mp3"; done'
@@ -124,5 +119,5 @@ alias js="jekyll serve"
 # Project paths
 alias project='source ~/.dotfiles/scripts/project.sh'
 
-# Mongodb in local folder
-alias mongod="mongod --dbpath /Users/askang/usr/local/var/mongodb"
+# Exa instead of list
+alias exa="exa --long --header --git"

@@ -20,7 +20,7 @@ call plug#end()
 "" Colors
 syntax enable			          " Enable syntax highlighting
 colorscheme dracula
-set guifont=Hack_Nerd_Font:h16
+set guifont=Fira_Code:h16
 
 "" Syntax highlight using coc.nvim
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
